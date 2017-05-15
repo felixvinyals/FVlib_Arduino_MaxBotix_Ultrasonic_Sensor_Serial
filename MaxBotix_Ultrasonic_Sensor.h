@@ -11,7 +11,7 @@
       int getDistance();
       byte pinTx;
       byte pinRx;
-      SoftwareSerial *serialMaxBotix;
+      SoftwareSerial serialMaxBotix;
 
     private:
 
