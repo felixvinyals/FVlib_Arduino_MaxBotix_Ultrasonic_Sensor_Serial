@@ -15,6 +15,8 @@ int MaxBotix::getDistance() {
   unsigned long lastTime = millis();
   boolean streamBeguin = false;
   int distance = 0;
+  
+  while(serialMaxBotix.available() > 0) serialMaxBotix.read();
 
   while ((millis() - lastTime) < 1000) {
     if (serialMaxBotix.available()) {
